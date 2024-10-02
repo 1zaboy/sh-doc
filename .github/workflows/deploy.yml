@@ -29,6 +29,9 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Токен для деплоя
+          GIT_USER: ${{ secrets.GIT_USER }}  # Пользователь GitHub
 
   deploy:
     name: Deploy to GitHub Pages

@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
   projectName: 'dtest.github.io',
   organizationName: 'z1cat',
-  deploymentBranch: 'main'
+  deploymentBranch: 'main',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',

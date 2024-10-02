@@ -28,7 +28,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: cmd /C "set GIT_USER=${{ secrets.GIT_USER }} && npm run deploy"
+        run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Токен для деплоя
           GIT_USER: ${{ secrets.GIT_USER }}  # Установите GIT_USER

@@ -12,10 +12,10 @@ const config: Config = {
   deploymentBranch: 'main',
 
   // Set the production url of your site here
-  url: 'https://1zaboy.github.io/sh-doc/',
+  url: 'https://1zaboy.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/sh-doc/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

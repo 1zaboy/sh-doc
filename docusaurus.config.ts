@@ -8,7 +8,6 @@ const config: Config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
-  projectName: 'dtest.github.io',
   organizationName: 'z1cat',
   deploymentBranch: 'main',
 
@@ -20,7 +19,6 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',

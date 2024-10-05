@@ -9,14 +9,15 @@ on:
 
 jobs:
   build:
+    name: Build Docusaurus
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'  # Убедитесь, что используете поддерживаемую версию Node.js
           cache: 'npm'  # Добавьте это, чтобы кэшировать зависимости npm
@@ -27,11 +28,10 @@ jobs:
       - name: Build Docusaurus website
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Токен для деплоя
-          GIT_USER: ${{ secrets.GIT_USER }}  # Установите GIT_USER
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
 
   deploy:
     name: Deploy to GitHub Pages

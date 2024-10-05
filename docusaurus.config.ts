@@ -8,8 +8,11 @@ const config: Config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
+
   organizationName: 'z1cat',
+  projectName: 'sh-doc', 
   deploymentBranch: 'main',
+  trailingSlash: true,
 
   // Set the production url of your site here
   url: 'https://1zaboy.github.io/',
@@ -19,7 +22,6 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  projectName: 'sh-doc', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',

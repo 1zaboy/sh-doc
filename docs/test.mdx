@@ -1,9 +1,14 @@
 import { TabView, TabPanel } from 'primereact/tabview';
-export const year = 2023;
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Mermaid from '@theme/Mermaid';
+
+export var year = Math.floor(Math.random() * 2000);
 
 # Last year’s snowfall
 In {year}, the snowfall was above average.
 
+## Primereact tabs
 <TabView>
     <TabPanel header="Header I">
         In {year}, the snowfall was above average.
@@ -25,3 +30,82 @@ In {year}, the snowfall was above average.
         </p>
     </TabPanel>
 </TabView>
+
+## Native tabs
+<Tabs>
+  <TabItem value="code" label="Code" default>
+    ```jsx title="/src/components/HelloCodeTitle.js"
+        function HelloCodeTitle(props) {
+            return <h1>Hello, {props.name}</h1>;
+        }
+    ```
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+
+## Netive Admonitions
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::warning
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+
+## Assets
+
+<a target="\_blank" href={require('./../assets/test.txt').default}> Download this docx </a>
+
+or
+
+[Download this docx using Markdown](./../assets/test.txt)
+
+
+## Markdown links
+- [URL path to another document](./intro.md)
+- [file path to another document](./tutorial-extras/manage-docs-versions.md)
+
+
+
+## Mermaid
+<Mermaid
+  value={`---
+title: Simple sample
+---
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]`}
+/>
